@@ -16,6 +16,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        var zamaniDurdur:Long = 0
+        binding.startButton.setOnClickListener {
+            binding.kronometre.base = SystemClock.elapsedRealtime() + zamaniDurdur
+            binding.kronometre.start()
+            binding.startButton.visibility = View.GONE
+            binding.pauseButton.visibility = View.VISIBLE
+            binding.imageView.setImageDrawable(getDrawable(R.drawable.pause))
+        }
     }
 }
