@@ -31,6 +31,14 @@ class MainActivity : AppCompatActivity() {
             binding.startButton.visibility = View.VISIBLE
             binding.imageView.setImageDrawable(getDrawable(R.drawable.start))
         }
+        binding.resetButton.setOnClickListener {
+            binding.kronometre.base=SystemClock.elapsedRealtime()
+            binding.kronometre.stop()
+            zamaniDurdur=0
+            binding.pauseButton.visibility = View.GONE
+            binding.startButton.visibility = View.VISIBLE
+            binding.imageView.setImageDrawable(getDrawable(R.drawable.start))
+        }
 
     }
 
