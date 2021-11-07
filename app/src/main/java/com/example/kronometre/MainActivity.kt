@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
             binding.pauseButton.visibility = View.GONE
             binding.startButton.visibility = View.VISIBLE
             binding.imageView.setImageDrawable(getDrawable(R.drawable.start))
+
         }
 
     }
