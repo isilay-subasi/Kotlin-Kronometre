@@ -24,5 +24,16 @@ class MainActivity : AppCompatActivity() {
             binding.pauseButton.visibility = View.VISIBLE
             binding.imageView.setImageDrawable(getDrawable(R.drawable.pause))
         }
+        binding.pauseButton.setOnClickListener {
+            zamaniDurdur=binding.kronometre.base-SystemClock.elapsedRealtime()
+            binding.kronometre.stop()
+            binding.pauseButton.visibility = View.GONE
+            binding.startButton.visibility = View.VISIBLE
+            binding.imageView.setImageDrawable(getDrawable(R.drawable.start))
+        }
+
     }
+
+
+
 }
